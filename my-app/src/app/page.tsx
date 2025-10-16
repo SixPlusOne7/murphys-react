@@ -8,28 +8,35 @@ import { Instagram, Facebook, Twitter } from "react-bootstrap-icons";
 
 /** Top bar */
 const TopMenu = () => (
-  <Navbar expand="lg" className="navbar-murphy py-2">
-    <Container className="justify-content-between">
-      <Navbar.Brand href="#">
-        <Image src="/murphyslogowhite.png" alt="Murphy's" height={48} />
+  <Navbar expand="lg" className="navbar-murphy py-2" data-bs-theme="dark">
+    <Container>
+      {/* Left: Logo */}
+      <Navbar.Brand href="#" className="me-auto">
+        <Image
+          src="/murphyslogowhite.png"
+          alt="Murphy's"
+          width={200}
+          className="img-fluid"
+        />
       </Navbar.Brand>
 
+      {/* Right: Hamburger + aligned links */}
       <Navbar.Toggle aria-controls="murphys-nav" />
-      <Navbar.Collapse id="murphys-nav" className="justify-content-end flex-wrap">
-        <Nav className="align-items-center flex-row gap-3">
-          <Nav.Link href="#">Home</Nav.Link>
-          <Nav.Link href="#">About Us</Nav.Link>
-          <Nav.Link href="#">St. Patrick&apos;s Day</Nav.Link>
-          <Nav.Link href="#">To Go Ordering</Nav.Link>
-          <Nav.Link href="#" className="text-white hover-link">Home</Nav.Link>
-          <Nav.Link href="#" aria-label="Instagram"><Instagram /></Nav.Link>
-          <Nav.Link href="#" aria-label="Facebook"><Facebook /></Nav.Link>
-          <Nav.Link href="#" aria-label="Twitter"><Twitter /></Nav.Link>
+      <Navbar.Collapse id="murphys-nav" className="justify-content-end">
+        <Nav className="align-items-center flex-row flex-wrap gap-4">
+          <Nav.Link href="#" className="text-white">Home</Nav.Link>
+          <Nav.Link href="#" className="text-white">About Us</Nav.Link>
+          <Nav.Link href="#" className="text-white">St. Patrick&apos;s Day</Nav.Link>
+          <Nav.Link href="#" className="text-white">To Go Ordering</Nav.Link>
+          <Nav.Link href="#" aria-label="Instagram" className="text-white"><Instagram /></Nav.Link>
+          <Nav.Link href="#" aria-label="Facebook" className="text-white"><Facebook /></Nav.Link>
+          <Nav.Link href="#" aria-label="Twitter" className="text-white"><Twitter /></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
   </Navbar>
 );
+
 
 /** Center hero section */
 const HeroSection = () => (
